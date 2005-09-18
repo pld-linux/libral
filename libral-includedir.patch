@@ -1,0 +1,19 @@
+--- libral-0.50/libral.pc.in.orig	2005-01-02 16:50:14.000000000 +0100
++++ libral-0.50/libral.pc.in	2005-09-18 14:21:58.000000000 +0200
+@@ -8,4 +8,4 @@
+ Requires: glib-2.0 gobject-2.0 libxml-2.0
+ Version: @LIBRAL_VERSION@
+ Libs: -L${libdir} -lral
+-Cflags: -I${includedir}/libral-@LIBRAL_VERSION@/libral
++Cflags: -I${includedir}/libral
+--- libral-0.50/src/Makefile.am.orig	2005-09-13 12:49:07.000000000 +0200
++++ libral-0.50/src/Makefile.am	2005-09-18 14:42:24.000000000 +0200
+@@ -73,7 +73,7 @@
+ 		error.h		\
+ 		types.h
+ 
+-libral_la_includedir = $(includedir)/libral-$(LIBRAL_VERSION)/libral
++libral_la_includedir = $(includedir)/libral
+ 
+ libral_la_LDFLAGS = -version-info $(LIBRAL_CURRENT_VERSION):$(LIBRAL_REVISION_VERSION):$(LIBRAL_COMPAT_VERSION)
+ 
