@@ -2,11 +2,12 @@ Summary:	Rubrica Addressbook Library
 Summary(pl):	Biblioteka do ksi±¿ki adresowej Rubrica
 Name:		libral
 Version:	0.50
-Release:	0.1
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://download.berlios.de/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	def06a6451d37fe5dea460781b9a3b31
+Patch0:		%{name}-includedir.patch
 URL:		http://developer.berlios.de/projects/libral
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -51,6 +52,7 @@ Statyczna biblioteka libral.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 cp -f /usr/share/automake/config.sub .
@@ -81,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
-%{_includedir}/libral-%{version}/libral/*.h
+%{_includedir}/libral
 %{_libdir}/libral.la
 %{_pkgconfigdir}/libral.pc
 %{_gtkdocdir}/libRAL
