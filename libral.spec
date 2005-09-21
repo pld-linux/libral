@@ -9,12 +9,13 @@ Source0:	http://download.berlios.de/libral/%{name}-%{version}.tar.gz
 # Source0-md5:	def06a6451d37fe5dea460781b9a3b31
 Patch0:		%{name}-includedir.patch
 URL:		http://developer.berlios.de/projects/libral/
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	glib2-devel
+BuildRequires:	autoconf >= 2.59
+BuildRequires:	automake >= 1.9
+BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	gtk-doc >= 1.3
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -58,18 +59,16 @@ cp -f /usr/share/automake/config.sub .
 %{__aclocal}
 %{__autoconf}
 
-%configure
+%configure \
+	--with-html-dir=%{_gtkdocdir}
 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-mv -f $RPM_BUILD_ROOT%{_datadir}/{gtk-doc,doc/}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
