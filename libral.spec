@@ -1,5 +1,5 @@
 Summary:	Rubrica Addressbook Library
-Summary(pl):	Biblioteka do ksi±¿ki adresowej Rubrica
+Summary(pl.UTF-8):   Biblioteka do ksiÄ…Å¼ki adresowej Rubrica
 Name:		libral
 Version:	0.50
 Release:	1
@@ -22,32 +22,32 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 LibRAL is an address book engine. It allows you to create your
 address books and to add personal and company cards to them.
 
-%description -l pl
-LibRAL jest silnikiem do ksi±¿ki adresowej. Pozwala stworzyæ
-ksi±¿kê adresow± i dodawaæ do niej osobiste oraz firmowe kartki.
+%description -l pl.UTF-8
+LibRAL jest silnikiem do ksiÄ…Å¼ki adresowej. Pozwala stworzyÄ‡
+ksiÄ…Å¼kÄ™ adresowÄ… i dodawaÄ‡ do niej osobiste oraz firmowe kartki.
 
 %package devel
 Summary:	Header files for libral
-Summary(pl):	Pliki nag³ówkowe do libral
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe do libral
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description devel
 Header files for libral library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki libral.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki libral.
 
 %package static
 Summary:	Static libral library
-Summary(pl):	Statyczna biblioteka libral
+Summary(pl.UTF-8):   Statyczna biblioteka libral
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libcddb library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libral.
 
 %prep
