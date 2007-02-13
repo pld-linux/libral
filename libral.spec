@@ -1,5 +1,5 @@
 Summary:	Rubrica Addressbook Library
-Summary(pl.UTF-8):   Biblioteka do książki adresowej Rubrica
+Summary(pl.UTF-8):	Biblioteka do książki adresowej Rubrica
 Name:		libral
 Version:	0.50
 Release:	1
@@ -28,7 +28,7 @@ książkę adresową i dodawać do niej osobiste oraz firmowe kartki.
 
 %package devel
 Summary:	Header files for libral
-Summary(pl.UTF-8):   Pliki nagłówkowe do libral
+Summary(pl.UTF-8):	Pliki nagłówkowe do libral
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -40,7 +40,7 @@ Pliki nagłówkowe biblioteki libral.
 
 %package static
 Summary:	Static libral library
-Summary(pl.UTF-8):   Statyczna biblioteka libral
+Summary(pl.UTF-8):	Statyczna biblioteka libral
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
